@@ -4,6 +4,7 @@ import { getMovies } from "@/services/movieService";
 import { ref } from "vue";
 import MovieSearch from "./MovieSearch.vue";
 import MovieModal from "./MovieModal.vue";
+import MoviePoster from "./MoviePoster.vue";
 
 const movies = ref<IMovie[]>([]);
 
@@ -22,13 +23,16 @@ const closeModal = () => {
   <div>
     <MovieSearch @movie-search="handleSearch" />
     <h2>Movies:</h2>
-    <ul>
-      <li v-for="movie in movies" :key="movie.imdbID">{{ movie.Title }}</li>
-    </ul>
+    <div class="movie-containter">
+      <MoviePoster
+        v-for="movie in movies"
+        :movie="movie"
+        :key="movie.imdbID"
+      ></MoviePoster>
+    </div>
   </div>
-  <div>
-    <MovieModal :isOpen="isModalOpened" @modal-close="closeModal"></MovieModal>
-  </div>
+
+  <MovieModal :isOpen="isModalOpened" @modal-close="closeModal"></MovieModal>
 </template>
 
 <style scoped></style>
