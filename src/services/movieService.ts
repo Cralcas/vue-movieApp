@@ -16,7 +16,6 @@ export const getMovies = async (searchText: string) => {
       throw new Error("No movies found");
     }
 
-    console.log(data.Search);
     return data.Search;
   } catch (error) {
     console.error("Error fetching movies:", error);

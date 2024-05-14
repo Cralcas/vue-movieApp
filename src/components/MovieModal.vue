@@ -25,10 +25,11 @@ const openModal = () => {
 
 <template>
   <div>
-    <button @click="openModal">Open Modal</button>
+    <button @click="openModal">Details</button>
     <Teleport to="body">
       <div v-if="open" class="modal">
-        <div>
+        <div class="modal--content">
+          <img class="modal__image" :src="movie.Poster" />
           <h3>{{ movie.Title }}</h3>
           <button @click="closeModal">Close</button>
         </div>
@@ -39,10 +40,10 @@ const openModal = () => {
 
 <style scoped>
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   display: flex;
@@ -50,9 +51,10 @@ const openModal = () => {
   align-items: center;
 }
 
-.modal > div {
+.modal--content {
+  text-align: center;
   background-color: #fff;
-  padding: 50px;
+  padding: 20px;
   border-radius: 10px;
 }
 </style>
