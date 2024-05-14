@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import type { IMovie } from "@/models/IMovie";
 import { Teleport, ref } from "vue";
+
+interface MovieModalProps {
+  movie: IMovie;
+}
+
+defineProps<MovieModalProps>();
 
 const open = ref(false);
 
@@ -22,7 +29,7 @@ const openModal = () => {
     <Teleport to="body">
       <div v-if="open" class="modal">
         <div>
-          <h3>Movie Title</h3>
+          <h3>{{ movie.Title }}</h3>
           <button @click="closeModal">Close</button>
         </div>
       </div>
