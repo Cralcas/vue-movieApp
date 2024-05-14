@@ -1,20 +1,33 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { Teleport, ref } from "vue";
 
 const open = ref(false);
+
+const emit = defineEmits(["modal-close", "modal-open"]);
+
+const closeModal = () => {
+  emit("modal-close");
+  open.value = false;
+};
+
+const openModal = () => {
+  emit("modal-close");
+  open.value = true;
+};
 </script>
 
 <template>
-  <button @click="open = true">Open Modal</button>
-
-  <Teleport to="body">
-    <div v-if="open" class="modal">
-      <div>
-        <h3>Movie Title</h3>
-        <button @click="open = false">Close</button>
+  <div>
+    <button @click="openModal">Open Modal</button>
+    <Teleport to="body">
+      <div v-if="open" class="modal">
+        <div>
+          <h3>Movie Title</h3>
+          <button @click="closeModal">Close</button>
+        </div>
       </div>
-    </div>
-  </Teleport>
+    </Teleport>
+  </div>
 </template>
 
 <style scoped>
