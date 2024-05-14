@@ -4,4 +4,5 @@ export interface IMovie {
   Type: string;
   Poster: string;
   Year: string;
+  imdbRating: string;
 }

@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import type { IMovie } from "@/models/IMovie";
+import { IMovieProps } from "@/models/IMovieProps";
 import { Teleport, ref } from "vue";
 
-interface MovieModalProps {
-  movie: IMovie;
-}
-
-defineProps<MovieModalProps>();
+defineProps<IMovieProps>();
 
 const open = ref(false);
 

@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import type { IMovie } from "@/models/IMovie";
 import { ref } from "vue";
 import MovieModal from "./MovieModal.vue";
+import { IMovieProps } from "@/models/IMovieProps";
 
-interface MovieProps {
-  movie: IMovie;
-}
-
-defineProps<MovieProps>();
+defineProps<IMovieProps>();
 
 const isModalOpened = ref(false);
 
