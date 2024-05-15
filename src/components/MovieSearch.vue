@@ -14,9 +14,15 @@ const handleSubmit = () => {
 };
 </script>
 <template>
-  <div>
+  <div class="input-container">
     <form @submit.prevent="handleSubmit">
       <input type="text" v-model="searchText" />
     </form>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.input-container {
+  margin: 0 auto;
+}
+</style>

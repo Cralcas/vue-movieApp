@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IMovie } from "@/models/IMovie";
+import type { IMovie } from "@/models/IMovie";
 import { getMovies } from "@/services/movieService";
 import { ref } from "vue";
 import MovieSearch from "./MovieSearch.vue";
@@ -14,9 +14,8 @@ const handleSearch = async (searchText: string) => {
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <MovieSearch @movie-search="handleSearch" />
-    <h2>Movies:</h2>
     <div class="movie-containter">
       <MoviePoster
         v-for="movie in movies"
@@ -27,4 +26,9 @@ const handleSearch = async (searchText: string) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+}
+</style>

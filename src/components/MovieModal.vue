@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IMovieProps } from "@/models/IMovieProps";
+import type { IMovieProps } from "@/models/IMovieProps";
 import { Teleport, ref } from "vue";
 
 defineProps<IMovieProps>();

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import MovieModal from "./MovieModal.vue";
-import { IMovieProps } from "@/models/IMovieProps";
+import type { IMovieProps } from "@/models/IMovieProps";
 
 defineProps<IMovieProps>();
 
@@ -16,7 +16,7 @@ const openModal = () => {
 </script>
 
 <template>
-  <div>
+  <div class="movie-poster">
     <h3>{{ movie.Title }}</h3>
     <img :src="movie.Poster" />
     <div>
@@ -29,4 +29,8 @@ const openModal = () => {
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.movie-poster {
+  text-align: center;
+}
+</style>
