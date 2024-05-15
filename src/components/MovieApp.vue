@@ -37,5 +37,14 @@ const handleSearch = async (searchText: string) => {
     text-align: center;
     gap: 10px;
   }
+
+  @media (min-width: 600px) {
+    .movie-container {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+  }
 }
 </style>

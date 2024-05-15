@@ -40,7 +40,7 @@ const openModal = () => {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   border-radius: 0px;
@@ -55,6 +55,12 @@ const openModal = () => {
     img {
       width: 100%;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .movie-poster {
+    width: 25%;
   }
 }
 </style>
