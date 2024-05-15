@@ -34,11 +34,21 @@ const openModal = () => {
 <style lang="scss" scoped>
 .movie-poster {
   width: 100%;
+  padding: 5px;
+
+  background: #181717;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  h3 {
+    padding: 0 5px;
+  }
   .image-container {
     width: 80%;
 

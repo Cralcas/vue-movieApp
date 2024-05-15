@@ -34,8 +34,8 @@ const handleSearch = async (searchText: string) => {
   .movie-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
+    text-align: center;
+    gap: 10px;
   }
 }
 </style>

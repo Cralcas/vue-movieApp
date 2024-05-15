@@ -5,5 +5,3 @@ import MovieApp from "./components/MovieApp.vue";
 <template>
   <MovieApp></MovieApp>
 </template>
-
-<style scoped></style>

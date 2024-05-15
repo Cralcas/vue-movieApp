@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Angkor&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Angkor", serif;
+
   display: flex;
   justify-content: center;
+  background: #131212;
+  color: #cf3232;
 }
