@@ -35,7 +35,7 @@ const openModal = () => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .modal {
   position: fixed;
   top: 0;
@@ -46,12 +46,12 @@ const openModal = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.modal--content {
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  .modal--content {
+    text-align: center;
+    background: #181717;
+    padding: 20px;
+    border-radius: 10px;
+  }
 }
 </style>
