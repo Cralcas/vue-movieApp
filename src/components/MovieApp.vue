@@ -16,7 +16,7 @@ const handleSearch = async (searchText: string) => {
 <template>
   <div class="container">
     <MovieSearch @movie-search="handleSearch" />
-    <div class="movie-containter">
+    <div class="movie-container">
       <MoviePoster
         v-for="movie in movies"
         :movie="movie"
@@ -26,9 +26,16 @@ const handleSearch = async (searchText: string) => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
   display: flex;
   flex-direction: column;
+
+  .movie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+  }
 }
 </style>

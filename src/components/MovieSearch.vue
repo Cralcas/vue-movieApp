@@ -24,5 +24,6 @@ const handleSubmit = () => {
 <style lang="scss" scoped>
 .input-container {
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 </style>

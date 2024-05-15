@@ -18,7 +18,9 @@ const openModal = () => {
 <template>
   <div class="movie-poster">
     <h3>{{ movie.Title }}</h3>
-    <img :src="movie.Poster" />
+    <div class="image-container">
+      <img :src="movie.Poster" />
+    </div>
     <div>
       <MovieModal
         @modal-open="openModal"
@@ -31,6 +33,18 @@ const openModal = () => {
 
 <style lang="scss" scoped>
 .movie-poster {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .image-container {
+    width: 80%;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 </style>
