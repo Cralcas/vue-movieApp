@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import MovieModal from "./MovieModal.vue";
 import type { IMovieProps } from "@/models/IMovieProps";
+import MovieModal from "./MovieModal.vue";
 
 defineProps<IMovieProps>();
 
@@ -26,7 +26,7 @@ const openModal = () => {
         @modal-open="openModal"
         @modal-close="closeModal"
         :movie="movie"
-      />
+      ></MovieModal>
     </div>
   </div>
 </template>
