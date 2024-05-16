@@ -21,13 +21,12 @@ const openModal = () => {
     <div class="image-container">
       <img :src="movie.Poster" />
     </div>
-    <div>
-      <MovieModal
-        @modal-open="openModal"
-        @modal-close="closeModal"
-        :movie="movie"
-      ></MovieModal>
-    </div>
+
+    <MovieModal
+      @modal-open="openModal"
+      @modal-close="closeModal"
+      :movie="movie"
+    ></MovieModal>
   </div>
 </template>
 
