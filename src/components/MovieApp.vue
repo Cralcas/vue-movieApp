@@ -3,7 +3,6 @@ import type { IMovie } from "@/models/IMovie";
 import { getMovies } from "@/services/movieService";
 import { ref } from "vue";
 import MovieSearch from "./MovieSearch.vue";
-
 import MoviePoster from "./MoviePoster.vue";
 
 const movies = ref<IMovie[]>([]);
@@ -15,7 +14,7 @@ const handleSearch = async (searchText: string) => {
 
 <template>
   <div class="container">
-    <MovieSearch @movie-search="handleSearch" />
+    <MovieSearch @movie-search="handleSearch"></MovieSearch>
     <div class="movie-container">
       <MoviePoster
         v-for="movie in movies"
