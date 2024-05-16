@@ -21,14 +21,14 @@ const openModal = () => {
 
 <template>
   <div>
-    <button @click="openModal">Details</button>
+    <button class="modal--button" @click="openModal">Details</button>
     <Teleport to="body">
       <div v-if="open" class="modal">
         <div class="modal--content">
           <img class="modal__image" :src="movie.Poster" />
           <h3>{{ movie.Title }}</h3>
           <p>{{ movie.Year }}</p>
-          <button @click="closeModal">Close</button>
+          <button class="modal--button" @click="closeModal">Close</button>
         </div>
       </div>
     </Teleport>
@@ -52,6 +52,18 @@ const openModal = () => {
     background: #181717;
     padding: 20px;
     border-radius: 10px;
+  }
+}
+
+.modal--button {
+  background: #cf3232;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
   }
 }
 </style>

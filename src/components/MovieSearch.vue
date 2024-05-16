@@ -25,7 +25,7 @@ const handleSubmit = () => {
 <style lang="scss" scoped>
 .form-container {
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   label {
     margin-right: 10px;
   }
