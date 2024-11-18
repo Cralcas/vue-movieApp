@@ -3,8 +3,9 @@ import type { IOmdbResponse } from "@/models/IOmdbResponse";
 export const getMovies = async (searchText: string) => {
   try {
     const apiKey = import.meta.env.VITE_OMDB_API_KEY;
-    const apiUrl = `https://omdbapi.com/?apikey=${apiKey}&s=batman`;
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      `https://omdbapi.com/?apikey=${apiKey}&s=${searchText}`
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch movies");
