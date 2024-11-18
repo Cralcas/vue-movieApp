@@ -29,6 +29,7 @@ const handleSearch = async (searchText: string) => {
 .container {
   display: flex;
   flex-direction: column;
+  padding-top: 24px;
 
   .movie-container {
     display: flex;

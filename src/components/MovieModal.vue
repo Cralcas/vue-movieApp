@@ -27,7 +27,9 @@ const openModal = () => {
         <div class="modal--content">
           <img class="modal__image" :src="movie.Poster" />
           <h3>{{ movie.Title }}</h3>
+
           <p>{{ movie.Year }}</p>
+
           <button class="modal--button" @click="closeModal">Close</button>
         </div>
       </div>

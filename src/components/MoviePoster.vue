@@ -33,7 +33,7 @@ const openModal = () => {
 <style lang="scss" scoped>
 .movie-poster {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
 
   background: #181717;
 
@@ -42,7 +42,7 @@ const openModal = () => {
   justify-content: space-between;
   align-items: center;
 
-  border-radius: 0px;
+  gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   h3 {
